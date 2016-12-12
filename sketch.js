@@ -29,18 +29,17 @@ function draw() {
   y = y + dy;
   z = z + dz;
   var array = [x,y];
+  translate(canvasSize/2,canvasSize/2);
+  scale(5);
   points.push(array);
-  var hu = 0.0;
   beginShape();
   for (var i = 0; i < points.length; i++) {
     noFill();
-    stroke(hu,255,255);
+    stroke(75)
+    strokeWeight(.1);
     tmp = points[i];
-    vertex((canvasSize / 2) + tmp[0],(canvasSize / 2) + tmp[1]);
-    hu += 0.1;
-    if (hu > 255) {
-      hu = 0;
-    }
+    vertex(tmp[0],tmp[1]);
+  
     
   }
   endShape();
