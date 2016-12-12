@@ -15,7 +15,7 @@ function setup() {
   b = 28;
   c = 8.0/3.0;
   points = [];
-  canvasSize = 1000;
+  canvasSize = 300;
   createCanvas(canvasSize,canvasSize);
 }
 
@@ -30,12 +30,12 @@ function draw() {
   z = z + dz;
   var array = [x,y];
   translate(canvasSize/2,canvasSize/2);
-  scale(5);
+  scale(canvasSize/200);
   points.push(array);
   beginShape();
   for (var i = 0; i < points.length; i++) {
     noFill();
-    stroke(75)
+    stroke(0)
     strokeWeight(.1);
     tmp = points[i];
     vertex(tmp[0],tmp[1]);
